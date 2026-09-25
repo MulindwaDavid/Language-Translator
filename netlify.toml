@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  FASIRI_TRANSLATE_URL = "https://api.fasiri-ai.com/api/v1/translate"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200

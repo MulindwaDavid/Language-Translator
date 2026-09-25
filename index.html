@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <div class="brand">
+          <span>Translator</span>
+        </div>
+        <p>Clear words, shared across languages.</p>
+      </header>
+
+      <form id="translation-form" class="translator">
+        <div class="language-row">
+          <label>From<select id="source-lang" name="sourceLang" disabled>
+            <option value="en" selected>English</option>
+          </select></label>
+          <label>To<select id="target-lang" name="targetLang">
+            <option value="lug" selected>Luganda</option>
+            <option value="nyn">Runyankore</option>
+            <option value="sw">Kiswahili</option>
+          </select></label>
+        </div>
+
+        <div id="chat-messages" class="chat-messages" aria-live="polite">
+          <p class="empty-state">Type something to translate…</p>
+        </div>
+
+        <div class="input-panel">
+          <textarea id="source-text" name="text" maxlength="5000" aria-label="Message to translate" placeholder="Type something…" required></textarea>
+          <div class="actions"><button id="translate-button" class="translate" type="submit">Send</button></div>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
